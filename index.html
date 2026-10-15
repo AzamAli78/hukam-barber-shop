@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hukam Hair Studio — Men's Salon in Phagwara</title>
+<meta name="description" content="Men's salon in Phagwara. Haircut, beard trim, clean shave, facial and groom packages. Book your turn on WhatsApp.">
+<meta name="theme-color" content="#16120F">
+
+<!-- WhatsApp / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hukam Hair Studio — Men's Salon in Phagwara">
+<meta property="og:description" content="Haircut, beard trim, clean shave and groom packages. Book your turn on WhatsApp.">
+<!-- After deploying, replace with the FULL url, e.g. https://username.github.io/repo/og.png
+     WhatsApp previews usually ignore a relative path. -->
+<meta property="og:image" content="og.png">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* base reset */
+html{-webkit-text-size-adjust:100%}
+:root{
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap">
+
+<style>
+/* Layout: single scroll column, vintage barbershop signage — dark brass on warm charcoal,
+   committed single-theme (a real salon site shouldn't flip with the viewer's OS). */
+:root{
+  --ink:#16120F;        /* warm charcoal, biased toward the brass accent */
+  --ink-2:#211B16;      /* raised surface */
+  --ink-3:#2E251D;      /* hairline / border */
+  --cream:#F3EADA;      /* primary text */
+  --cream-dim:#A99887;  /* secondary text */
+  --brass:#D4A537;      /* accent */
+  --brass-deep:#9C7420;
+  --wa:#25D366;         /* WhatsApp, semantic not decorative */
+  --wa-ink:#07301A;
+
+  --display:"Alfa Slab One",Rockwell,Georgia,serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --cond:"Barlow Condensed","Barlow",system-ui,sans-serif;
+
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--cream);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:860px;margin-inline:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+h1,h2,h3{text-wrap:balance;margin:0}
+a{color:inherit}
+img{max-width:100%}
+
+/* barber pole stripe, used as a thin rule */
+.pole{
+  height:6px;
+  background:repeating-linear-gradient(115deg,
+    var(--brass) 0 10px,var(--ink-3) 10px 20px,var(--cream) 20px 30px,var(--ink-3) 30px 40px);
+  opacity:.85;
+}
+
+/* ---------- header ---------- */
+.top{border-bottom:1px solid var(--ink-3);background:var(--ink-2)}
+.top .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-block:12px}
+.mark{font-family:var(--cond);font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  font-size:15px;color:var(--brass)}
+.sample{
+  margin-left:auto;font-family:var(--cond);font-weight:600;font-size:12px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);
+  border:1px solid var(--ink-3);border-radius:999px;padding:3px 11px;white-space:nowrap;
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+   radial-gradient(120% 90% at 50% -10%,rgba(212,165,55,.16),transparent 60%),var(--ink)}
+.hero .wrap{padding-block:52px 40px;text-align:center}
+.est{font-family:var(--cond);font-weight:600;letter-spacing:.3em;text-transform:uppercase;
+  font-size:12px;color:var(--brass);margin-bottom:18px}
+.name{font-family:var(--display);font-size:clamp(38px,11vw,70px);line-height:.98;
+  letter-spacing:.005em;color:var(--cream);margin-bottom:6px}
+.name span{display:block;color:var(--brass)}
+.tag{font-family:var(--cond);font-size:clamp(16px,4.4vw,21px);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--cream-dim);margin:14px 0 28px}
+.rule{display:flex;align-items:center;gap:14px;justify-content:center;margin:0 auto 26px;max-width:320px}
+.rule i{flex:1;height:1px;background:var(--ink-3)}
+.rule b{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brass)}
+
+/* ---------- buttons ---------- */
+.wa{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--wa);color:var(--wa-ink);text-decoration:none;
+  font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.07em;
+  text-transform:uppercase;padding:14px 26px;border-radius:6px;
+  box-shadow:0 8px 24px rgba(37,211,102,.22);
+}
+.wa:hover{filter:brightness(1.07)}
+.wa svg{width:21px;height:21px;flex:none;fill:currentColor}
+.wa-ghost{
+  display:inline-flex;align-items:center;gap:8px;background:none;color:var(--brass);
+  border:1px solid var(--brass-deep);border-radius:5px;padding:8px 14px;text-decoration:none;
+  font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.09em;text-transform:uppercase;
+}
+.wa-ghost:hover{background:rgba(212,165,55,.1)}
+/* per-service enquiry: quiet text link, not a seventh button */
+.wa-link{
+  display:inline-flex;align-items:center;gap:6px;color:var(--brass);text-decoration:none;
+  font-family:var(--cond);font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+  border-bottom:1px solid transparent;
+}
+.wa-link:hover{border-bottom-color:var(--brass-deep)}
+.wa-link::after{content:"›";font-size:17px;line-height:1;transform:translateY(-1px)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+.open-now{
+  margin-top:20px;font-family:var(--cond);font-size:15px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--cream-dim)
+}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--wa);
+  margin-right:7px;vertical-align:1px}
+
+/* ---------- sections ---------- */
+section{border-top:1px solid var(--ink-3)}
+section .wrap{padding-block:40px}
+.h2{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:6px}
+.h2-big{font-family:var(--display);font-size:clamp(25px,6.5vw,34px);line-height:1.15;margin-bottom:24px}
+
+/* ---------- services ---------- */
+.menu{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.menu li{
+  display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+  padding:15px 0;border-bottom:1px dashed var(--ink-3);
+}
+.menu .s-name{font-family:var(--cond);font-weight:600;font-size:20px;letter-spacing:.04em;
+  text-transform:uppercase;min-width:0}
+.menu .s-dots{flex:1;min-width:18px;border-bottom:1px dotted var(--ink-3);transform:translateY(-4px)}
+.menu .s-price{font-family:var(--display);font-size:19px;color:var(--brass);
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.menu .s-note{flex-basis:100%;font-size:14px;color:var(--cream-dim);margin-top:-2px}
+.menu .s-cta{flex-basis:100%;margin-top:9px}
+
+/* ---------- features ---------- */
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;
+  background:var(--ink-3);border:1px solid var(--ink-3);border-radius:8px;overflow:hidden}
+.feat{background:var(--ink-2);padding:22px 20px;min-width:0}
+.feat h3{font-family:var(--cond);font-weight:700;font-size:17px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:7px}
+.feat p{margin:0;font-size:15px;color:var(--cream-dim)}
+
+/* ---------- hours ---------- */
+.hours{display:grid;gap:1px;background:var(--ink-3);border:1px solid var(--ink-3);border-radius:8px;
+  overflow:hidden;max-width:460px}
+.hours div{display:flex;justify-content:space-between;align-items:baseline;gap:10px;background:var(--ink-2);
+  padding:12px 16px;font-family:var(--cond);font-size:clamp(15px,4vw,17px);letter-spacing:.05em;
+  text-transform:uppercase}
+.hours span{min-width:0}
+.hours .shut{color:var(--cream-dim)}
+.hours .shut b{color:#E0765A;font-weight:600}
+.hours time{font-variant-numeric:tabular-nums;color:var(--brass);white-space:nowrap}
+
+/* ---------- contact ---------- */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px}
+.contact h3{font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:9px}
+.addr{font-size:16px;line-height:1.65;color:var(--cream);margin:0 0 14px}
+.phone-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.phone{font-family:var(--display);font-size:22px;color:var(--cream);
+  font-variant-numeric:tabular-nums;user-select:all}
+.copy{
+  background:none;border:1px solid var(--ink-3);color:var(--cream-dim);border-radius:5px;
+  padding:6px 12px;font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.1em;
+  text-transform:uppercase;cursor:pointer;
+}
+.copy:hover{border-color:var(--brass-deep);color:var(--brass)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--ink-3);background:var(--ink-2)}
+footer .wrap{padding-block:26px 30px;text-align:center}
+footer p{margin:0;font-size:13px;color:var(--cream-dim)}
+footer .by{margin-top:10px;font-family:var(--cond);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+
+/* ---------- sticky mobile bar ---------- */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;
+  background:rgba(22,18,15,.94);backdrop-filter:blur(8px);
+  border-top:1px solid var(--ink-3);
+  padding-top:10px;
+  padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.bar .wa{width:100%;max-width:520px;margin-inline:auto;display:flex}
+.spacer{height:92px}
+@media (min-width:700px){.bar,.spacer{display:none}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="pole"></div>
+
+<header class="top">
+  <div class="wrap">
+    <span class="mark">Hukam Hair Studio</span>
+    <span class="sample">Sample site</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="est">Men's Salon &middot; Phagwara</div>
+    <h1 class="name">Hukam <span>Hair Studio</span></h1>
+    <p class="tag">Cut &middot; Shave &middot; Grooming</p>
+
+    <div class="rule"><i></i><b>Walk in or book on WhatsApp</b><i></i></div>
+
+    <a class="wa" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20Hukam%20Hair%20Studio." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+      Book on WhatsApp
+    </a>
+
+    <p class="open-now"><span class="dot"></span>Open today till 9:00 PM</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <p class="h2">Rate list</p>
+    <h2 class="h2-big">Services &amp; Prices</h2>
+
+    <ul class="menu">
+      <li>
+        <span class="s-name">Hair Cut</span><i class="s-dots"></i><span class="s-price">₹150</span>
+        <span class="s-note">Wash, cut and blow dry included.</span>
+        <span class="s-cta"><a class="wa-link" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20Hair%20Cut." target="_blank" rel="noopener">Book this on WhatsApp</a></span>
+      </li>
+      <li>
+        <span class="s-name">Beard Trim &amp; Shape</span><i class="s-dots"></i><span class="s-price">₹100</span>
+        <span class="s-note">Line-up, shape and hot towel finish.</span>
+        <span class="s-cta"><a class="wa-link" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20Beard%20Trim." target="_blank" rel="noopener">Book this on WhatsApp</a></span>
+      </li>
+      <li>
+        <span class="s-name">Clean Shave</span><i class="s-dots"></i><span class="s-price">₹120</span>
+        <span class="s-note">Straight razor, hot towel, after-shave.</span>
+        <span class="s-cta"><a class="wa-link" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20Clean%20Shave." target="_blank" rel="noopener">Book this on WhatsApp</a></span>
+      </li>
+      <li>
+        <span class="s-name">Head Massage</span><i class="s-dots"></i><span class="s-price">₹200</span>
+        <span class="s-note">Almond or coconut oil, 20 minutes.</span>
+        <span class="s-cta"><a class="wa-link" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20Head%20Massage." target="_blank" rel="noopener">Book this on WhatsApp</a></span>
+      </li>
+      <li>
+        <span class="s-name">Hair Colour</span><i class="s-dots"></i><span class="s-price">₹600</span>
+        <span class="s-note">Ammonia-free colour. Beard colour ₹250.</span>
+        <span class="s-cta"><a class="wa-link" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20Hair%20Colour." target="_blank" rel="noopener">Book this on WhatsApp</a></span>
+      </li>
+      <li>
+        <span class="s-name">Facial &amp; Clean-up</span><i class="s-dots"></i><span class="s-price">₹500</span>
+        <span class="s-note">De-tan, clean-up and massage.</span>
+        <span class="s-cta"><a class="wa-link" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20a%20Facial." target="_blank" rel="noopener">Book this on WhatsApp</a></span>
+      </li>
+      <li>
+        <span class="s-name">Groom Package</span><i class="s-dots"></i><span class="s-price">₹2,500</span>
+        <span class="s-note">Haircut, facial, hair spa and beard styling before the wedding.</span>
+        <span class="s-cta"><a class="wa-link" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20details%20of%20the%20Groom%20Package." target="_blank" rel="noopener">Book this on WhatsApp</a></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="h2">Why us</p>
+    <h2 class="h2-big">What you get</h2>
+    <div class="feats">
+      <div class="feat">
+        <h3>12 years running</h3>
+        <p>The same chair, the same hands. Most of our customers have been coming for years.</p>
+      </div>
+      <div class="feat">
+        <h3>New blade, every time</h3>
+        <p>A fresh blade for every shave, sanitised tools and clean towels.</p>
+      </div>
+      <div class="feat">
+        <h3>No long wait</h3>
+        <p>Message on WhatsApp before you come and we keep your turn ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="h2">Timings</p>
+    <h2 class="h2-big">When we're open</h2>
+    <div class="hours">
+      <div><span>Mon, Wed &ndash; Sun</span><time>9:00 AM &ndash; 9:00 PM</time></div>
+      <div class="shut"><span>Tuesday</span><b>Closed</b></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="h2">Find us</p>
+    <h2 class="h2-big">Come in</h2>
+    <div class="contact">
+      <div>
+        <h3>Address</h3>
+        <p class="addr">Shop No. 7, Main Bazaar Road<br>Near Bus Stand, Phagwara<br>Punjab 144401</p>
+        <a class="wa-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Main+Bazaar+Road+Phagwara+Punjab" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+      <div>
+        <h3>Phone &amp; WhatsApp</h3>
+        <div class="phone-row">
+          <span class="phone" id="num">98765 43210</span>
+          <button class="copy" id="copyBtn" type="button">Copy</button>
+        </div>
+        <p style="margin:12px 0 14px;font-size:14px;color:var(--cream-dim)">
+          Same number for calls and WhatsApp.
+        </p>
+        <a class="wa" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          Message us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Hukam Hair Studio &middot; Main Bazaar Road, Phagwara</p>
+    <p class="by">Sample website &mdash; demo only</p>
+  </div>
+</footer>
+
+<div class="spacer"></div>
+
+<div class="bar">
+  <a class="wa" href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20Hukam%20Hair%20Studio." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+    Book on WhatsApp
+  </a>
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copyBtn'),num=document.getElementById('num');
+  if(!btn||!num)return;
+  btn.addEventListener('click',function(){
+    var t=num.textContent.trim(),done=function(){
+      btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy';},1600);
+    };
+    try{
+      navigator.clipboard.writeText(t).then(done,function(){select();});
+    }catch(e){select();}
+    function select(){
+      var r=document.createRange();r.selectNodeContents(num);
+      var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+      btn.textContent='Selected';setTimeout(function(){btn.textContent='Copy';},1600);
+    }
+  });
+})();
+</script>
+</body>
+</html>
